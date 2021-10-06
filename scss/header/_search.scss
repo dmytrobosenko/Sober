@@ -1,0 +1,66 @@
+.search{
+    display: none;
+    align-items: center;
+    position: absolute;
+    background: $white;
+    max-width: 630px;
+    margin: 0 auto;    
+    top: 200%;
+    left: 0; 
+    right: 0;
+    z-index: 1;
+}
+
+
+.search_btn{
+    border: none;    
+    background: $white;
+    width: 42px;
+    height: 42px;
+    @include icon(search3);
+}
+.search_label{    
+    align-items: center;
+    font-size: 0;
+
+    @extend %flex;
+
+    @include icon(search3);
+    
+}
+.search_label::before, .search_btn::before{    
+    font-size: 16px;   
+}
+.search_checkbox:checked~.search{
+    display: flex;
+    
+}
+.search_checkbox:checked~.search_label::before{
+    color: $blue;
+}
+.search_checkbox:checked~.search .search_btn::before{
+    color: $blue;
+}
+.search_line{
+    border: none;
+    margin-left: 5px;
+    outline: none;
+    height: 42px;
+    width: 100%;          
+}
+.shadow{
+    position: fixed;
+    left: -100%;
+    font-size: 0;
+    top: 68px;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 85, 98, 0.5);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+.search_checkbox:checked~.shadow{
+    left: 0;
+    opacity: 1;
+}

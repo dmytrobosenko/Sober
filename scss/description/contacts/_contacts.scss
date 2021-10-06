@@ -1,0 +1,55 @@
+// .section_contacts{
+//     @extend %section-color;
+//     @extend %section_padding;    
+// }
+.section_contacts{
+    @extend %section_width;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    background: $blue;
+    border-radius: 5px;
+    min-height: 160px;
+    padding: 0 10px;
+    margin-bottom: 140px;
+    @include respond-to(1023px){
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include respond-to(tablet){
+        margin-bottom: 100px;        
+    }
+    @include respond-to(mobile){
+        margin-bottom: 60px;       
+    }    
+    
+}
+.section_contacts-text{
+    font-size: rem(24);
+    margin: 0;
+    max-width: none;
+    @include respond-to(tablet){
+        margin-bottom: 20px;
+    }
+    @include respond-to(mobile){
+        font-size: rem(18);
+        margin-bottom: 25px;
+    }
+}
+.section_contacts-inner .contacts_phone{
+    background: $white;
+    color: $blue;
+}
+.section_contacts .contacts::before{
+    @include respond-to(1024px){
+    content: "";
+    border-left: 1px solid $white;    
+    border-radius: 50%;
+    width:433px;
+    height:433px; 
+    top: -89%;
+    left: 60%;
+    position: absolute;    
+    }  
+}

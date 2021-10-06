@@ -1,0 +1,35 @@
+
+
+@mixin respond-to($screenSize){
+    @if $screenSize == 1023px {
+      @media screen and (max-width: 1023px){
+          @content
+      }
+    };
+    @if $screenSize == 1024px {
+        @media screen and (min-width: 1024px){
+            @content
+        }
+    }
+    // @if $screenSize == 768px {
+    //     @media screen and (max-width: 768px){
+    //         @content
+    //     }
+    // };
+    // @if $screenSize == 700px {
+    //   @media screen and (max-width: 700px){
+    //       @content
+    //   }
+    // };
+    @if $screenSize == mobile {
+        @media screen and (max-width: 767px){
+            @content
+        }
+            
+    };
+    @if $screenSize == tablet{
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            @content
+        }
+    }
+    };

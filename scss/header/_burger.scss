@@ -1,0 +1,38 @@
+.burger_line, .burger::after, .burger::before{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: $black;
+    margin: 2px 0px;
+    transition: 0.3s;
+    font-size: 0;
+}
+.burger{
+    display: none;  
+    
+    @include respond-to(1023px){
+        display: block;
+    }   
+}
+.burger_checkbox:checked~.burger::after{
+    transform: rotate(45deg);
+}
+.burger_checkbox:checked~.burger::before{
+    display: none;
+}
+.burger_checkbox:checked~.burger .burger_line{
+    transform: rotate(-45deg);
+    margin: -4px 0;
+}
+.burger_checkbox:checked~.header_inner .nav_list{
+    @include respond-to(1023px){
+        display: block;        
+    }
+    
+}
+.burger_checkbox:checked~.header_inner .shadow{
+    left: 0;
+    opacity: 1;
+}

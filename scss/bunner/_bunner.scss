@@ -1,0 +1,237 @@
+.bunner{
+        
+    background: url(../img/banner.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    min-height: 630px;
+    // margin-top: 68px;
+
+    @extend %flex;
+    
+    @extend %section_padding;
+
+    @include respond-to(mobile){
+        background: url(../img/bunner_mobile.png);
+        min-height: 605px;
+        background-repeat:no-repeat;
+        background-position: center;      
+        
+    }    
+}
+.bunner_main{     
+    @extend %section_width;
+
+    @extend %flex;    
+    
+    @include respond-to(mobile){        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.bunner_section{
+    max-width: 707px;
+    width: 100%;    
+}
+.bunner_title{    
+    font-size: rem(72);
+    line-height: 65px;    
+    margin-bottom: 36px;
+    margin-top: 130px;
+
+    @extend %text-transform;
+
+    @include respond-to(tablet){
+        font-size: rem(60);
+        line-height: 55px;
+        margin-top: 162px;
+    }
+    @include respond-to(mobile){
+        margin-bottom: 60px;
+        margin-top: 0;
+        font-size: rem(52);
+        line-height: 48px;        
+    }
+}
+.bunner_list{
+
+    @extend %flex;
+
+    @include respond-to(1023px){
+        display: block;
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+        padding-left: 40px;
+    }
+    @include respond-to(mobile){
+        padding-left: 30px;
+        margin-left: 15px;
+    }
+}
+.bunner_item{
+    font-size: rem(13);
+
+    @extend %text-transform;
+
+    @include respond-to(mobile){
+    font-size: rem(12);
+    }
+}
+.bunner_item+.bunner_item{
+    margin-left: 50px;
+    @include respond-to(1023px){
+        margin-left: 0;
+        margin-top: 17px;
+    }
+}
+.bunner_contacts{    
+    text-align: left;
+    @include respond-to(mobile){
+        max-width: none;
+    }    
+}
+.bunner_text{    
+    max-width: 220px;
+    font-size: rem(18);
+    margin-top: 280px;
+    margin-bottom: 26px;
+
+    @extend %text-transform;
+   
+    @include respond-to(tablet){
+        font-size: rem(16);
+        margin-bottom: 32px;
+    }    
+    @include respond-to(mobile){
+        margin-top: 60px;
+        font-size: rem(14);
+    }
+}
+.bunner_phone{
+    display: flex;
+    margin-left: 0;    
+    
+}
+
+
+
+
+// ----------------------------------
+// .bunner_title, .bunner_list {
+//     width: 75.961538%;
+//     @include respond-to(mobile){
+//         width: 100%;
+//     }
+// }
+// .bunner_text, .bunner_contacts{
+//     width: 24.0384615%;
+//     @include respond-to(mobile){
+//         width: 100%;
+//     }
+// }
+// .bunner_title, .bunner_text{
+//     margin-bottom: 36px;
+// }
+// .bunner{
+    
+//     background: url(../img/banner.png);
+//     background-size: cover;
+//     background-repeat:no-repeat;
+//     background-position: center;
+//     min-height: 630px;
+//     margin-top: 50px;
+//     padding-top: 130px;
+//     @include respond-to(mobile){
+//         background: url(../img/bunner_mobile.png);
+//         min-height: 605px;
+//         background-repeat:no-repeat;
+//         background-position: center;       
+        
+//     }
+//     @include respond-to(tablet){
+//         padding-top: 162px;
+//     }
+
+    
+// }
+// .bunner_main{
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: baseline;
+//     max-width: 930px;
+//     width: 100%;
+//     margin: 0 auto;
+    
+    
+//     @include respond-to(tablet){
+//         max-width: 610px;
+//     }
+//     @include respond-to(mobile){
+//         display: flex;
+//         flex-direction: column;
+        
+//         padding-left: 35px;
+//         padding-right: 35px;
+//     }
+// }
+// .bunner_title{
+//     text-transform: uppercase;
+//     color: #ffffff;
+//     font-size: rem(72);
+//     line-height: 65px;
+//     font-weight: 500;
+   
+//     @include respond-to(tablet){
+//         font-size: rem(60);
+//         line-height: 55px;
+        
+//     }
+//     @include respond-to(mobile){
+        
+//         font-size: rem(52);
+//         line-height: 48px;
+        
+//     }
+// }
+
+// .bunner_contacts{
+//     margin-left: 0;
+//     display: flex;
+// }
+// .bunner_section{
+//     display: flex;
+//     flex-direction: column-reverse;
+// }
+// .bunner_text{
+//     font-size: rem(18);
+    
+//     text-transform: uppercase;
+//     font-weight: 500;
+//     color: #ffffff;
+//     margin-top: auto;
+    
+// }
+// .bunner_item{
+//     font-size: rem(13);
+//     font-weight: 400;
+//     text-transform: uppercase;
+//     color: #ffffff;
+// }
+// .bunner_item+.bunner_item{
+//     margin-left: 50px;
+//     @include respond-to(1023px){
+//         margin-left: 0;
+//         margin-top: 17px;
+//     }
+// }
+// .bunner_list{
+//     display: flex;
+//     @include respond-to(1023px){
+//         display: block;
+//         border-left: 2px solid rgba(255, 255, 255, 0.3);
+//         padding-left: 40px;
+//     }
+//     @include respond-to(mobile){
+//         padding-left: 30px;
+//     }
+// }

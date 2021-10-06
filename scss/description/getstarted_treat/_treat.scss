@@ -1,0 +1,33 @@
+.treat{
+    background: $treat_bg;
+    @extend %section_padding;
+}
+.treat_inner{
+    padding-top: 120px;    
+    @extend %section_width;
+    @include respond-to(tablet){
+        padding-top: 100px;
+    }
+    @include respond-to(mobile){
+        padding-top: 80px;       
+    }
+
+}
+.treat_title{
+    font-size: rem(36);
+    margin-bottom: 60px;
+    @extend %text-transform;
+    @include respond-to(tablet){
+        font-size: rem(30);
+    }
+    @include respond-to(mobile){
+        font-size: rem(20);
+    }
+}
+.treat_item-title, .treat_item-text{
+    color: $white;
+    
+}
+.treat_item-title{
+    border-bottom-color: $white;
+}

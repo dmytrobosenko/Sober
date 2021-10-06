@@ -1,0 +1,56 @@
+.getstarted, .treat_inner{
+    @extend %section_width;
+    padding-bottom: 60px;
+    @include respond-to(mobile){
+        padding-bottom: 40px;
+    }    
+}
+.treat_list, .getstarted_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-end;    
+    margin-right: procent(1000, -40);
+    padding-top: 20px;
+    @include respond-to(1023px){
+        padding-top: 10px;     
+    }
+    @include respond-to(tablet){       
+        margin-right: procent(768, -55);         
+    }
+    @include respond-to(mobile){       
+        margin-right: 0;         
+    }
+}
+.treat_item, .getstarted_item{
+    max-width: procent(1000, ((1000-120)/3));
+    width: 100%;
+    margin-right: procent(1000, 40);
+    margin-bottom: 60px;
+    @include respond-to(1023px){
+        margin-bottom: 40px;     
+        }
+    @include respond-to(tablet){
+        max-width: procent(768, ((768-110)/2)); 
+        margin-right: procent(768, 55);     
+        }
+    @include respond-to(mobile){
+        max-width: 100%; 
+        margin-right: 0;     
+        }   
+    
+}
+.getstarted_item-title, .treat_item-title{
+    font-size: rem(24);
+    font-weight: 700;
+    color: $blue;
+    text-transform: capitalize;
+    border-bottom: 2px solid $blue;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+        @include respond-to(tablet){
+            font-size: rem(22);        
+        }
+        @include respond-to(mobile){
+            font-size: rem(18);        
+        }
+}

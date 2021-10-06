@@ -1,0 +1,29 @@
+%flex {
+    display: flex; 
+ }
+ %text-transform{
+     text-transform: uppercase;
+     color: #ffffff;
+     font-weight: 500;
+ }
+ %section-color{
+     background:#ffffff; 
+ }
+ %section_width{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+ }
+ %section_padding{
+    padding-left: 25px;
+    padding-right: 25px;
+    @include respond-to(tablet){
+        padding-left: procent(768, 70);
+        padding-right: procent(768, 70);      
+        
+    }
+    @include respond-to(mobile){
+        padding-left: 15px;
+        padding-right: 15px;        
+    }
+ }

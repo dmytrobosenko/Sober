@@ -1,0 +1,6 @@
+@function rem($size) {
+  @return $size/16+rem;
+}
+@function procent($base, $fact){
+  @return ($fact/$base*100)*1%;
+}
